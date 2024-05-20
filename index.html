@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Study</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+
+  <div class="demo">
+    <div v-show="showDetails">
+      {{statement}} {{name}} - {{age}} <br><br>
+
+      <button v-on:click="age++">Increase age</button>
+      <button @click="age--">Decrease age</button>
+  
+      <button @click="name ='Felicien'">Change Name</button><br><br>
+    </div>
+
+    <button @click="toggleshowDetails">
+      <span v-if="showDetails">Hide Details</span>
+      <span v-else>Unhide Details</span>
+    </button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
